@@ -9,14 +9,13 @@
     <!-- Font Awesome CSS CDN (for icons) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        /* Custom styles can be added here */
         body {
-            padding-top: 56px; /* Adjust based on your navbar height */
+            padding-top: 56px; /* Adjust based on navbar height */
         }
         .container-fluid a{
             display: flex;
             justify-content: space-evenly;
-            margin-right: 75%;
+            margin-right: 70%;
             padding: 10px;   
         }
         #navbarNav a{
@@ -51,6 +50,58 @@
         .content {
             margin-left: 250px;
             padding: 20px;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+        }
+
+        /* Chat box styling */
+        .chat-box {
+            border: 1px solid #ccc;
+            height: 400px;
+            overflow-y: scroll;
+            padding: 10px;
+        }
+
+        .message {
+            margin-bottom: 10px;
+        }
+
+        /* Input area styling */
+        .input-group {
+            margin-top: 10px;
+        }
+        .card{
+            max-width: 90%;
+        }.nav-link img{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #e84118;
+            padding: 2px;
+        }a.nav-link{
+            padding: 0px;
+        }.card-body{
+            height: 500px;
+            overflow: auto;
+            width: 100%;
+        }.avatar{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 2px solid #e84118;
+            padding: 12px;
+        }.card-footer{
+            width: 100%;
+        }.input-group{
+            width: unset;
+            align-items: center;
+            margin-top: unset;
+        }.container{
+            margin-right: unset;
+        }.container-fluid{
+            margin-right: unset;
         }
     </style>
 </head>
@@ -100,11 +151,132 @@
 </div>
 
 <!-- Main Content Area -->
-<div class="content">
-    <h2>Welcome to the Seller Dashboard</h2>
-    <!-- Add your dashboard content here -->
-    <div class="content-form">
-        
+<div class="container mt-4">
+    <div class="card mx-auto">
+        <div class="card-header bg-transparent">
+            <div class="navbar navbar-expand p-0">
+                <ul class="navbar-nav me-auto align-items-center">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <div class="position-relative" style="border-radius:50%;">
+                                <img src="sonny1.jpg" class="img-fluid rounded circle" alt="">
+                                <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                                    <span class="visually-hidden">New alerts</span>
+                                  </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">Buyer</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="fa fa-info-circle"></i>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="" class="nav-link">
+                            <i class="fa fa-times"></i>
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+
+        </div>
+        <div class="card-body p-4">
+
+            <div class="d-flex align-items-baseline mb4">
+                <div class="position-relative avatar">
+                    <img src="sonny1.jpg" class="img-fluid rounded circle" alt="">
+                    <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                      </span>
+                </div>
+
+                <div class="pe-2">
+                    <div>
+                        <div class="card d-inline-block p-2 px-3 m-1">Hi, is the item still available?</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-baseline text-end justify-content-end mb4">
+                <div class="pe-2">
+                    <div>
+                        <div class="card d-inline-block p-2 px-3 m-1">Yes</div>
+                    </div>
+                    <div>
+                        <div class="card d-inline-block p-2 px-3 m-1">Are you interested?</div>
+                    </div>
+                </div>
+                
+                <div class="position-relative avatar">
+                    <img src="sonny1.jpg" class="img-fluid rounded circle" alt="">
+                    <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                      </span>
+                </div>
+            </div>
+
+            <div class="d-flex align-items-baseline mb4">
+                <div class="position-relative avatar">
+                    <img src="sonny1.jpg" class="img-fluid rounded circle" alt="">
+                    <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                      </span>
+                </div>
+
+                <div class="pe-2">
+                    <div>
+                        <div class="card d-inline-block p-2 px-3 m-1">Yes na yes para sayo</div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="d-flex align-items-baseline text-end justify-content-end mb4">
+                <div class="pe-2">
+                    <div>
+                        <div class="card d-inline-block p-2 px-3 m-1">Okay, sabi mo eh</div>
+                    </div>
+                </div>
+                
+                <div class="position-relative avatar">
+                    <img src="sonny1.jpg" class="img-fluid rounded circle" alt="">
+                    <span class="position-absolute bottom-0 start-100 translate-middle p-1 bg-success border border-light rounded-circle">
+                        <span class="visually-hidden">New alerts</span>
+                      </span>
+                </div>
+            </div>
+
+        </div>
+        <div class="card-footer bg-transparent position-absolute bottom-0 m-0 p-1">
+            <div class="input-group">
+                <div class="input-group-text bg-transparent border-0">
+                    <button class="btn light">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                </div>
+                <input type="text" class="form-control border-0" placeholder="Write a message...">
+            <div class="input-group">
+                    <div class="input-group-text bg-transparent border-0">
+                        <button class="btn light">
+                            <i class="fas fa-smile"></i>
+                        </button>
+                    </div>
+                <div class="input-group">
+                    <div class="input-group-text bg-transparent border-0">
+                    <button class="btn light">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </div>
 </div>
 
