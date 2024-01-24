@@ -40,45 +40,46 @@
 		</div>
 		@endif
 		<form class="justify-content-center" id="sellerForm" onsubmit="return validateForm()" action="{{ route('sellerreg') }}" method="POST">
-			  <label for="registeredName">Registered Name</label>
-			  <input for="text" id="registeredName" name="registeredName" placeholder="Your Name" required>
-		  
-			  <label for="sellerType">Seller Type:</label>
-			  <select id="sellerType" name="sellerType">
-				<option value="individual">Individual</option>
-				<option value="group">Group</option>
-			  </select>
-	
-			  <label for="registeredAddress">Registered Address </label>
-			  <input type="text" id="registeredAddress" name="registeredAddress" placeholder="Your Address"required>
-		  
-			  <label for="businessName">Business Type</label>
-			  <input type="text" id="businessName" name="businessName" placeholder="Your Business Name"required>
-	
-			  <label for="shopName">Shop Name</label>
-				<input for="text" maxlength="30" id="shopName" name="shopName" placeholder="Your Shop Name"required>
-		  
-			  <label for="pickupAddress">Pick-up Address</label>
-			  <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Your Pickup Address"required>
-		  
-			  <label for="email">Email Address:</label>
-			  <input type="text" id="email" name="email" placeholder="Your Email" required>
-		  
-			  <label for="phoneNo">Contact Number</label>
-			  <input type="text" maxlength="11" id="phoneNo" name="phoneNo" placeholder="Your Contact Number"required>
-	
-			  <label for="password">Password</label>
-			  <input type="password" id="password" name="password" placeholder="Your Password"required>
-	
-			  <label for="confirm_password">Confirm Password</label>
-			  <input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required> 
-			  <br>
-			  <br>
-			  <button type="button" onclick="cancelForm()">Cancel</button>
-			  <br>
-			  <br>
-			  <button>Submit</button>
-			</form>
+			@csrf
+			<label for="registeredName">Registered Name</label>
+			<input for="text" id="registeredName" name="registeredName" placeholder="Your Name" required>
+		
+			<label for="sellerType">Seller Type:</label>
+			<select id="sellerType" name="sellerType">
+			<option value="individual">Individual</option>
+			<option value="group">Group</option>
+			</select>
+
+			<label for="registeredAddress">Registered Address </label>
+			<input type="text" id="registeredAddress" name="registeredAddress" placeholder="Your Address"required>
+		
+			<label for="businessName">Business Type</label>
+			<input type="text" id="businessName" name="businessName" placeholder="Your Business Name"required>
+
+			<label for="shopName">Shop Name</label>
+			<input for="text" maxlength="30" id="shopName" name="shopName" placeholder="Your Shop Name"required>
+		
+			<label for="pickupAddress">Pick-up Address</label>
+			<input type="text" id="pickupAddress" name="pickupAddress" placeholder="Your Pickup Address"required>
+		
+			<label for="email">Email Address:</label>
+			<input type="text" id="email" name="email" placeholder="Your Email" required>
+		
+			<label for="phoneNo">Contact Number</label>
+			<input type="text" maxlength="11" id="phoneNo" name="phoneNo" placeholder="Your Contact Number"required>
+
+			<label for="password">Password</label>
+			<input type="password" id="password" name="password" placeholder="Your Password"required>
+
+			<label for="confirm_password">Confirm Password</label>
+			<input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required> 
+			<br>
+			<br>
+			<button type="button" onclick="cancelForm()">Cancel</button>
+			<br>
+			<br>
+			<button>Submit</button>
+		</form>
 	</div>
 
 	
