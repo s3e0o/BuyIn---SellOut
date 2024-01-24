@@ -49,3 +49,5 @@ Route::get('/sellerdashboard', [SuperAdminController::class, 'sellerdashboard'])
 
 Route::get('/sellersa', [SuperAdminController::class, 'sellersa']);
 Route::get('/selleracc', [SuperAdminController::class, 'selleracc']);
+Route::get('/sales', [SuperAdminController::class, 'sellersales']);
+Route::get('/sellerprofile', [SuperAdminController::class, 'sellerprofile']);

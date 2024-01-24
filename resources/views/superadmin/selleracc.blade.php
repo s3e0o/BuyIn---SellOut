@@ -29,7 +29,7 @@
 				<span class="bottom"></span>
 			</li>
 			<li>
-				<a href="sales.html">
+				<a href="{{ asset('/sales') }}">
 					<span class="icon"><i class='bx bxs-bar-chart-alt-2' ></i></span>
 					<span class="text">Number of Sales</span>
 				</a>

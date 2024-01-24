@@ -20,4 +20,14 @@ class SuperAdminController extends Controller
     {
         return view('superadmin/selleracc');
     }
+
+    public function sellersales()
+    {
+        return view('superadmin/sales');
+    }
+
+    public function sellerprofile()
+    {
+        return view('superadmin/sellerprofile');
+    }
 }

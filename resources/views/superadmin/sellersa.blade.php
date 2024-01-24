@@ -29,32 +29,9 @@
 				<span class="bottom"></span>
 			</li>
 			<li>
-				<a href="sales.html">
+				<a href="{{ asset('/sales') }}">
 					<span class="icon"><i class='bx bxs-bar-chart-alt-2' ></i></span>
-					<span class="text">
-						<label class="dropdown">
-
-							<div class="dd-button">
-							  Dropdown
-							</div>
-						  
-							<input type="checkbox" class="dd-input" id="test">
-						  
-							<ul class="dd-menu">
-							  <li>Per Caegory</li>
-							  <li>Per Gender</li>
-							  <li>Per Age</li>
-							  <li class="divider"></li>
-							  <li>
-								<a href="#">Return/Refund/Cancellation</a>
-							  </li>
-							  <li>
-								<a href="#">Revenue per month/day</a>
-							  </li>
-							</ul>
-							
-						  </label>
-					</span>
+					<span class="text">Number of Sales</span>
 					
 				</a>
 				<span class="top"></span>
@@ -92,7 +69,12 @@
 			<li>
 				<a href="#" class="logout">
 					<span class="icon"><i class='bx bxs-log-out-circle' ></i></span>
-					<span class="text">Logout</span>
+					<span class="form">
+						<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Logout</button>
+					</form></span>
 				</a>
 			</li>
 		</ul>
