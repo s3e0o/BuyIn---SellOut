@@ -3,6 +3,8 @@
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Controller;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\SellerAuthController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -30,8 +32,14 @@ Route::group(['middleware' => 'guest'], function () {
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/home', [HomeController::class, 'index']);
     Route::delete('/logout', [AuthController::class, 'logout'])->name('logout');
+
+    Route::get('/sellerauth', [SellerAuthController::class, 'sellerreg'])->name('sellerreg');
+    Route::post('/sellerauth', [SellerAuthController::class, 'sellerregPost'])->name('sellerauth');
 });
 
 Route::get('/landing', [Controller::class, 'index']);
+Route::get('/customersupport', [Controller::class, 'customersupport']);
 
 Route::get('/homee', [HomeController::class, 'home']);
+
+Route::get('/account', [AdminController::class, 'buyeracc']);

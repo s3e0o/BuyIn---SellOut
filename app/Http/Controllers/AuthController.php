@@ -40,7 +40,7 @@ class AuthController extends Controller
         ];
  
         if (Auth::attempt($credentials)) {
-            return redirect('/home')->with('success', 'Login Success');
+            return redirect('/homee')->with('success', 'Login Success');
         }
  
         return back()->with('error', 'Error Email or Password');
@@ -50,6 +50,6 @@ class AuthController extends Controller
     {
         Auth::logout();
  
-        return redirect()->route('login');
+        return redirect('/landing');
     }
 }

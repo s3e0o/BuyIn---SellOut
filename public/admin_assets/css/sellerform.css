@@ -1,0 +1,114 @@
+*{
+  margin: .0%;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+body {
+  height: 100%;
+}
+/*navbar*/
+#header {
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: auto;
+  }
+.search-bar{
+  background:#333;
+  height: 60px;
+}
+.menu-btn{
+  color: #424144;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+.navbar{
+  padding:20px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+  position:absolute;
+  top: 0;
+  z-index: 999;
+  background-color:#4077c8 ;
+  box-shadow: 0 0 14px rgba(0,0,0,0.3);
+}
+.navbar .logo h2{
+  color:white;
+  border-bottom: 2px solid lightgreen;
+}
+.navbar .menu li{
+  list-style: none;
+  display: inline-block;
+}
+.navbar .menu li a{
+  display: block;
+  margin-left: 20px;
+  color: white;
+  border-bottom: 4px solid transparent;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+.navbar .menu li .active{
+  border-bottom: 2px solid lightgreen;
+}
+.navbar .menu li a:hover{
+  border-bottom: 2px solid lightgreen;
+}
+.search-box{
+  float:right;
+  display:flex;
+}
+.tbox{
+  line-height: 20px;
+  padding: 10px;
+  width: 600px;
+  align-items: center;
+}
+.searchbtn{
+  width: 40px;
+  color: black;
+  background-color: #4077c8;
+}
+
+form {
+    background-color: skyblue;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 1000px;
+	  margin: auto;
+	  margin-top: 100px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+  }
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }

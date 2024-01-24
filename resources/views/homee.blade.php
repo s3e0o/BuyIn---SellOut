@@ -26,12 +26,16 @@
             <button class="searchbtn"><i class="fas fa-search"></i></i></button>
         </div>
         <ul class="menu">
-            <li><a href="dashboard.html">Home</a></li>
-            <li><a href="products.html">Products</a></li>
+            <li><a href="{{ asset('/homee')}}">Home</a></li>
             <li><a href="cart.html">Cart</a></li>
-            <li><a href="account.html">Account</a></li>
-            <li><a href="customer.html">Customer Support</a></li>
+            <li><a href="{{ asset('/account') }}">Account</a></li>
+            <li><a href="{{ asset('/customersupport') }}">Customer Support</a></li>
         </ul>
+		<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+			@csrf
+			@method('DELETE')
+			<button class="btn btn-danger" type="submit">Logout</button>
+		</form>
 <!--for resposive button-->
         <div class = "menu-btn">
             <i  class = "fa fa-bars"></i>
@@ -43,7 +47,7 @@
 		<div class="products">
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/1.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/1.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Lady Made Bag</div>
 				<div class="box">
@@ -55,7 +59,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/2.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/2.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Black Handbag</div>
 				<div class="box">
@@ -67,7 +71,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/3.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/3.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Gray Sling/Hand Bag</div>
 				<div class="box">
@@ -79,7 +83,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/4.jpeg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/4.jpeg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Brown Bag with pouch</div>
 				<div class="box">
@@ -91,7 +95,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/5.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/5.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Small Bag</div>
 				<div class="box">
@@ -103,7 +107,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/6.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/6.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Korean Style Handbag</div>
 				<div class="box">
@@ -115,7 +119,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/7.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/7.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Travel Bag</div>
 				<div class="box">
@@ -127,7 +131,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/8.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/8.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Sling Bag</div>
 				<div class="box">
@@ -139,7 +143,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/9.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/9.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Stylish Brown Bag</div>
 				<div class="box">
@@ -151,7 +155,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="womens bag/10.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/10.jpg') }}"alt=""></div>
 				<div class="desc">Women</div>
 				<div class="title">Cute Sling Bag</div>
 				<div class="box">
@@ -169,7 +173,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/1.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/1.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Trending Bag For Men</div>
 				<div class="box">
@@ -181,7 +185,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/2.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/2.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">School/Work Bag</div>
 				<div class="box">
@@ -193,7 +197,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/3.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/3.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Backpack</div>
 				<div class="box">
@@ -205,7 +209,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/4.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/4.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Sling Bag</div>
 				<div class="box">
@@ -217,7 +221,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/5.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/5.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Black Sling Bag</div>
 				<div class="box">
@@ -229,7 +233,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/6.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/6.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">School and Work Backpack</div>
 				<div class="box">
@@ -241,7 +245,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/7.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/7.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Lether Side Bag</div>
 				<div class="box">
@@ -253,7 +257,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/8.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/8.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Backpack for Hiking/Camping</div>
 				<div class="box">
@@ -265,7 +269,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/9.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/9.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">LV Sling Bag Black</div>
 				<div class="box">
@@ -277,7 +281,7 @@
 
 			<!--card start-->
 			<div class="card">
-				<div class="img"><img src="mens bag/10.jpg"alt=""></div>
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/10.jpg') }}"alt=""></div>
 				<div class="desc">Men</div>
 				<div class="title">Burberry Black Sling Bag</div>
 				<div class="box">

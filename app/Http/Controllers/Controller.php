@@ -14,4 +14,9 @@ class Controller extends BaseController
     {
         return view('landing');
     }
+
+    public function customersupport()
+    {
+        return view('customersupport');
+    }
 }

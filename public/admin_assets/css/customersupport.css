@@ -1,0 +1,129 @@
+<!--customersup-->
+body {
+	background-color: rgb(154, 153, 218);
+}
+
+/*navbar*/
+#header {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: auto;
+    }
+.search-bar{
+    background:#333;
+    height: 60px;
+}
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.navbar{
+    padding:20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    position:absolute;
+    top: 0;
+    z-index: 999;
+    background-color:#4077c8 ;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+}
+.navbar .logo h2{
+    color:white;
+    border-bottom: 2px solid lightgreen;
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar .menu li .active{
+    border-bottom: 2px solid lightgreen;
+}
+.navbar .menu li a:hover{
+    border-bottom: 2px solid lightgreen;
+}
+.search-box{
+    float:right;
+    display:flex;
+}
+.tbox{
+    line-height: 20px;
+    padding: 10px;
+    width: 600px;
+    align-items: center;
+}
+.searchbtn{
+    width: 40px;
+    color: black;
+    background-color: #4077c8;
+}
+
+
+.layout {
+	width: 600px;
+	margin: auto;
+}
+.accordion {
+	padding: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: rgb(105, 129, 206);
+	border-radius: 10px;
+}
+
+.accordion__question p {
+	margin: 5px;
+	padding: 0;
+	font-family: Verdana;
+	font-size: 20px;
+	color: #ffff;
+}
+
+.accordion__answer p {
+	margin: 5px;
+	padding: 10px;
+	font-size: large;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color:white;
+	background: rgba(82, 138, 170, 0);
+	border-radius: 10px;
+}
+
+.accordion:hover {
+	cursor: pointer;
+}
+
+.accordion__answer {
+	display: none;
+}
+
+.accordion.active .accordion__answer {
+	display: block;
+}
+
+.faq-section {
+	width: 50%;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+  }
+  /* Clearfix to fix float issues */
+  .clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+  }
