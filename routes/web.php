@@ -36,6 +36,8 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::get('/sellerauth', [SellerAuthController::class, 'sellerreg'])->name('sellerreg');
     Route::post('/sellerauth', [SellerAuthController::class, 'sellerregPost'])->name('sellerauth');
+    Route::get('/login', [SellerAuthController::class, 'sellerLogin'])->name('login');
+    Route::post('/login', [SellerAuthController::class, 'sellerLoginPost'])->name('login');
 });
 
 Route::get('/landing', [Controller::class, 'index']);
