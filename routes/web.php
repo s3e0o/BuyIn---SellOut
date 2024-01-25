@@ -52,3 +52,4 @@ Route::get('/selleracc', [SuperAdminController::class, 'selleracc']);
 Route::get('/sales', [SuperAdminController::class, 'sellersales']);
 Route::get('/sellerprofile', [SuperAdminController::class, 'sellerprofile']);
 Route::get('/buyersa', [SuperAdminController::class, 'buyersa']);
+Route::get('/buyeracc', [SuperAdminController::class, 'buyeracc']);

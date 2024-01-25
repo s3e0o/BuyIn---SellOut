@@ -9,7 +9,7 @@
 	<link rel="stylesheet" href="{{ asset('admin_assets/css/selleracc.css') }}">
 	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <title>Seller Account</title>
+    <title>Buyer Account</title>
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -31,7 +31,7 @@
 			<li>
 				<a href="{{ asset('/sales') }}">
 					<span class="icon"><i class='bx bxs-bar-chart-alt-2' ></i></span>
-					<span class="text">Number of Sales</span>
+					<span class="text">Number of Orders</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
@@ -39,24 +39,12 @@
 			<li>
 				<a href="profile.html">
 					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Seller</span>
+					<span class="text">Profile of Buyer</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
 			</li>
-			<li>
-				<a href="team.html">
-					<span class="icon"><i class='bx bxs-group' ></i></span>
-					<span class="text">Team</span>
-				</a>
-				<span class="top"></span>
-				<span class="bottom"></span>
-			</li>
-		</ul>
-			<span class="top"></span>
-			<span class="bottom"></span>
-		</li>
-	</ul>
+	    </ul>
 
 		<ul class="side-menu bottom">
 			<li>
@@ -68,7 +56,12 @@
 			<li>
 				<a href="#" class="logout">
 					<span class="icon"><i class='bx bxs-log-out-circle' ></i></span>
-					<span class="text">Logout</span>
+					<span class="form">
+						<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Logout</button>
+					</form></span>
 				</a>
 			</li>
 		</ul>
@@ -115,7 +108,7 @@
 			<div class="table-data">
 				<div class="order">
 					<div class="head">
-						<h3>Seller Account</h3>
+						<h3>Buyer Account</h3>
 						<span><i class='bx bx-search' ></i></span>
 						<span><i class='bx bx-filter' ></i></span>
 					</div>

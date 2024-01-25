@@ -35,4 +35,9 @@ class SuperAdminController extends Controller
     {
         return view('superadmin/buyersa');
     }
+
+    public function buyeracc()
+    {
+        return view('superadmin/buyeracc');
+    }
 }

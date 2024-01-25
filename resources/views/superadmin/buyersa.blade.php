@@ -21,7 +21,7 @@
 		<ul class="side-menu">
 
 			<li  class="active">
-				<a href="{{ asset('/selleracc') }}">
+				<a href="{{ asset('/buyeracc') }}">
 					<span class="icon"><i class='bx bxs-shopping-bag-alt' ></i></span>
 					<span class="text">Accounts</span>
 				</a>
