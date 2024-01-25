@@ -6,10 +6,10 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="{{ asset('admin_assets/css/sellerprofile.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin_assets/css/selleracc.css') }}">
 	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <title>Accounts of Sellers and Buyers</title>
+    <title>Buyer Account</title>
 </head>
 <body>
     <!-- SIDEBAR -->
@@ -20,7 +20,7 @@
 		</a>
 		<ul class="side-menu">
 
-			<li>
+			<li class="active">
 				<a href="{{ asset('/selleracc') }}">
 					<span class="icon"><i class='bx bxs-shopping-bag-alt' ></i></span>
 					<span class="text">Accounts</span>
@@ -31,32 +31,20 @@
 			<li>
 				<a href="{{ asset('/sales') }}">
 					<span class="icon"><i class='bx bxs-bar-chart-alt-2' ></i></span>
-					<span class="text">Number of Sales</span>
-				</a>
-				<span class="top"></span>
-				<span class="bottom"></span>
-			</li>
-			<li class="active">
-				<a href="{{ asset('/sellerprofile') }}">
-					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Seller</span>
+					<span class="text">Number of Orders</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
 			</li>
 			<li>
-				<a href="team.html">
-					<span class="icon"><i class='bx bxs-group' ></i></span>
-					<span class="text">Team</span>
+				<a href="profile.html">
+					<span class="icon"><i class='bx bxs-comment' ></i></span>
+					<span class="text">Profile of Buyer</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
 			</li>
-		</ul>
-			<span class="top"></span>
-			<span class="bottom"></span>
-		</li>
-	</ul>
+	    </ul>
 
 		<ul class="side-menu bottom">
 			<li>
@@ -68,7 +56,12 @@
 			<li>
 				<a href="#" class="logout">
 					<span class="icon"><i class='bx bxs-log-out-circle' ></i></span>
-					<span class="text">Logout</span>
+					<span class="form">
+						<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Logout</button>
+					</form></span>
 				</a>
 			</li>
 		</ul>
@@ -98,28 +91,68 @@
 		</nav>
 
         <main>
-            <div class="container profile-container">
-                <div class="text-center">
-                    <img src="profile-picture.jpg" alt="Profile Picture" class="profile-picture">
-                    <h1 class="mt-3">Seller Name</h1>
-                    <p class="lead">Business Name</p>
-                </div>
-        
-                <hr>
-        
-                <h3>About Shop</h3>
-                <p>Description about the shop goes here. You can provide a brief overview of products and items.</p>
-        
-                <h3>Business Experience</h3>
+                    <li>
+                        <a href="accounts.html">Account</a>
+                    </li>
+                    <li class="arrow-icon"><i class='bx bx-chevron-right'></i></li>
             </div>
-        
+			<div class="box-info">
+			<div class="box">
+				<span class="icon"><iconify-icon icon="bx:user-circle"></iconify-icon></span>
+				<div class="text">
+					<h3>2</h3>
+					<p>Total of Accounts</p>
+				</div>
+			</div>
+		</div>
+			<div class="table-data">
+				<div class="order">
+					<div class="head">
+						<h3>Buyer Account</h3>
+						<span><i class='bx bx-search' ></i></span>
+						<span><i class='bx bx-filter' ></i></span>
+					</div>
+						<table>
+							<thead>
+								<tr>
+									<th>SL</th>
+									<th>Image</th>
+									<th>Name</th>
+									<th>Phone</th>
+									<th>Address</th>
+								</tr>
+							</thead>
+			
+							<tbody>
+								<tr>
+									<td>01</td>
+									<td>
+										<img src="user.png" alt="">
+									</td>
+									<td>Kristel Jeanne Bautista</td>
+									<td>0111111111</td>
+									<td>Libsong East</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<td>02</td>
+									<td>
+										<img src="user.png" alt="">
+									</td>
+									<td>Kristel Jeanne Bautista</td>
+									<td>0111111111</td>
+									<td>Libsong East</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 
+				</div>
+				
+			</div>
         </main>
 	</section>
-    <script src="{{ asset('admin_assets/js/accounts.js') }}"></script>
-    <!-- Bootstrap JS and Popper.js (optional) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="accounts.js"></script>
 </body>
 </html>

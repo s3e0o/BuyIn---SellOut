@@ -1,36 +1,319 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Laravel 10 Custom Login and Registration</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href=" nunito-font.css ">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{{ asset('admin_assets/css/product.css') }}"/>
+	<link rel="stylesheet" href="{{ asset('admin_assets/css/owl.carousel.min.css') }}"/>
+	<!-- Bootstrap Css -->
+    <link rel="stylesheet" href="{{ asset('admin_assets/css/bootstrap.min.css') }}"/>
+	<!-- Required meta tags -->
+  <script src="product.js" async></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+  <!--Main JavaScript -->
+
 </head>
 <body>
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-            </ul>
-            <form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
-                @csrf
-                @method('DELETE')
-                <button class="btn btn-danger" type="submit">Logout</button>
-            </form>
-          </div>
+
+    <nav class ="navbar">
+        <div class="logo"><h2>Products</h2></div>
+        <div class="search-box">
+            <input type="text" class="tbox" placeholder="Search for products"/>
+            <button class="searchbtn"><i class="fas fa-search"></i></i></button>
+        </div>
+        <ul class="menu">
+            <li><a href="{{ asset('/homee')}}">Home</a></li>
+            <li><a href="{{route('shopping.cart')}}">Cart</a></li> <span class="badge bg-danger">{{ count((array) session('cart')) }}</span>
+            <li><a href="{{ asset('/account') }}">Account</a></li>
+            <li><a href="{{ asset('/customersupport') }}">Customer Support</a></li>
+        </ul>
+		
+<!--for resposive button-->
+        <div class = "menu-btn">
+            <i  class = "fa fa-bars"></i>
         </div>
     </nav>
- 
-    <div class="container">
-       <h1> Welcome, {{ Auth::user()->name }}</h1>
-    </div>
-</body>
+
+    <h2 class = "pheading">Bags for Women</h2>
+	<section class="sec">
+		<div class="products">
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/1.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Lady Made Bag</div>
+				<div class="box">
+					<div class="price">P350</div>
+					<p class="btn-holder"><a href="{{ route('additem.to.cart', $item->id) }}" class="btn btn-outline-danger">Add to cart</a> </p>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/2.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Black Handbag</div>
+				<div class="box">
+					<div class="price">P250</div>
+					<p class="btn-holder"><a href="{{ route('additem.to.cart', $item->id) }}" class="btn btn-outline-danger">Add to cart</a> </p>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/3.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Gray Sling/Hand Bag</div>
+				<div class="box">
+					<div class="price">P400</div>
+					<p class="btn-holder"><a href="{{ route('additem.to.cart', $item->id) }}" class="btn btn-outline-danger">Add to cart</a> </p>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/4.jpeg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Brown Bag with pouch</div>
+				<div class="box">
+					<div class="price">P500</div>
+					<p class="btn-holder"><a href="{{ route('additem.to.cart', $item->id) }}" class="btn btn-outline-danger">Add to cart</a> </p>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/5.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Small Bag</div>
+				<div class="box">
+					<div class="price">P200</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/6.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Korean Style Handbag</div>
+				<div class="box">
+					<div class="price">P150</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/7.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Travel Bag</div>
+				<div class="box">
+					<div class="price">P900</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/8.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Sling Bag</div>
+				<div class="box">
+					<div class="price">P250</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/9.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Stylish Brown Bag</div>
+				<div class="box">
+					<div class="price">P350</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/womens bag/10.jpg') }}"alt=""></div>
+				<div class="desc">Women</div>
+				<div class="title">Cute Sling Bag</div>
+				<div class="box">
+					<div class="price">P300</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+
+		</div>
+
+		<h2 class = "pheading">Bags for Men</h2>
+			<div class="products">
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/1.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Trending Bag For Men</div>
+				<div class="box">
+					<div class="price">P200</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/2.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">School/Work Bag</div>
+				<div class="box">
+					<div class="price">P550</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/3.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Backpack</div>
+				<div class="box">
+					<div class="price">P500</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/4.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Sling Bag</div>
+				<div class="box">
+					<div class="price">P350</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/5.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Black Sling Bag</div>
+				<div class="box">
+					<div class="price">P200</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/6.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">School and Work Backpack</div>
+				<div class="box">
+					<div class="price">P450</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/7.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Lether Side Bag</div>
+				<div class="box">
+					<div class="price">P450</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/8.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Backpack for Hiking/Camping</div>
+				<div class="box">
+					<div class="price">P500</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/9.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">LV Sling Bag Black</div>
+				<div class="box">
+					<div class="price">P1000</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+			<!--card start-->
+			<div class="card">
+				<div class="img"><img src="{{ asset('admin_assets/img/mens bag/10.jpg') }}"alt=""></div>
+				<div class="desc">Men</div>
+				<div class="title">Burberry Black Sling Bag</div>
+				<div class="box">
+					<div class="price">P950</div>
+					<button class="btn">Add to Cart</button>
+				</div>
+			</div>
+			<!--card end-->
+
+
+		</div>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="mdb.min.js"></script>
+    <!-- Custom scripts -->
+    <script type="text/javascript" src="script.js"></script>
+	<script src="jquery-3.3.1.min.js"></script>
+    <script src="popper.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="jquery.sticky.js"></script>
+	<script src="https://kit.fontawesome.com/64fd8e8cb1.js" crossorigin="anonymous"></script>
+
+	
+	<footer>
+		<p>Copyrights at <a href=""></a>BuyIn&SellOut</p>
+	</footer>
+
+	<!--jquery-->
+	<script>
+
+		$(".menu-btn").click(function(){
+			$(".navbar.menu").toggleClass("active");
+			$(".menu-btn i").toggleClass("active");
+		});
+		
+		</script>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
 </html>

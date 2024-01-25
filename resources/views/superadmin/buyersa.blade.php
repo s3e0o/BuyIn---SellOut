@@ -6,22 +6,22 @@
 	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 	<!-- My CSS -->
-	<link rel="stylesheet" href="{{ asset('admin_assets/css/selleracc.css') }}">
+	<link rel="stylesheet" href="{{ asset('admin_assets/css/sellersa.css') }}">
 	<script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
 
-    <title>Seller Account</title>
+    <title>Buyer Account</title>
 </head>
 <body>
     <!-- SIDEBAR -->
 	<section id="sidebar">
 		<a href="#" class="logo">
 			<span class="icon"><i class='bx bxs-smile'></i></span>
-			<span class="text">Super Admin</span>
+			<span class="text"><a href="{{ asset('/home') }}">BuyIn & SellOut</a></span>
 		</a>
 		<ul class="side-menu">
 
-			<li class="active">
-				<a href="{{ asset('/selleracc') }}">
+			<li  class="active">
+				<a href="{{ asset('/buyeracc') }}">
 					<span class="icon"><i class='bx bxs-shopping-bag-alt' ></i></span>
 					<span class="text">Accounts</span>
 				</a>
@@ -31,7 +31,8 @@
 			<li>
 				<a href="{{ asset('/sales') }}">
 					<span class="icon"><i class='bx bxs-bar-chart-alt-2' ></i></span>
-					<span class="text">Number of Sales</span>
+					<span class="text">Number of Orders</span>
+					
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
@@ -39,7 +40,7 @@
 			<li>
 				<a href="profile.html">
 					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Seller</span>
+					<span class="text">Profile of Buyer</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
@@ -68,7 +69,12 @@
 			<li>
 				<a href="#" class="logout">
 					<span class="icon"><i class='bx bxs-log-out-circle' ></i></span>
-					<span class="text">Logout</span>
+					<span class="form">
+						<form action="{{ route('logout') }}" method="POST" class="d-flex" role="search">
+						@csrf
+						@method('DELETE')
+						<button class="btn btn-danger" type="submit">Logout</button>
+					</form></span>
 				</a>
 			</li>
 		</ul>
@@ -112,52 +118,49 @@
 				</div>
 			</div>
 		</div>
-			<div class="table-data">
-				<div class="order">
-					<div class="head">
-						<h3>Seller Account</h3>
-						<span><i class='bx bx-search' ></i></span>
-						<span><i class='bx bx-filter' ></i></span>
-					</div>
-						<table>
-							<thead>
-								<tr>
-									<th>SL</th>
-									<th>Image</th>
-									<th>Name</th>
-									<th>Phone</th>
-									<th>Address</th>
-								</tr>
-							</thead>
-			
-							<tbody>
-								<tr>
-									<td>01</td>
-									<td>
-										<img src="user.png" alt="">
-									</td>
-									<td>Kristel Jeanne Bautista</td>
-									<td>0111111111</td>
-									<td>Libsong East</td>
-								</tr>
-							</tbody>
-							<tbody>
-								<tr>
-									<td>02</td>
-									<td>
-										<img src="user.png" alt="">
-									</td>
-									<td>Kristel Jeanne Bautista</td>
-									<td>0111111111</td>
-									<td>Libsong East</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-
-				</div>
-				
-			</div>
+            <div class="table-data">
+                <div class="order">
+                    <div class="head">
+                        <h3>Buyers Account</h3>
+                        <span><i class='bx bx-search' ></i></span>
+                        <span><i class='bx bx-filter' ></i></span>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>SL</th>
+                                <th>Image</th>
+                                <th>Name</th>
+                                <th>Phone</th>
+                                <th>Address</th>
+                            </tr>
+                        </thead>
+        
+                        <tbody>
+                            <tr>
+                                <td>01</td>
+                                <td>
+                                    <img src="user.png" alt="">
+                                </td>
+                                <td>Kristel Jeanne Bautista</td>
+                                <td>0111111111</td>
+                                <td>Libsong East</td>
+                            </tr>
+                        </tbody>
+                        <tbody>
+                            <tr>
+                                <td>02</td>
+                                <td>
+                                    <img src="user.png" alt="">
+                                </td>
+                                <td>Kristel Jeanne Bautista</td>
+                                <td>0111111111</td>
+                                <td>Libsong East</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
         </main>
 	</section>
     <script src="accounts.js"></script>

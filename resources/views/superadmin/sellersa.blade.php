@@ -38,9 +38,9 @@
 				<span class="bottom"></span>
 			</li>
 			<li>
-				<a href="profile.html">
+				<a href="{{ asset('/sellerprofile') }}">
 					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Buyer</span>
+					<span class="text">Profile of Seller</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
@@ -113,7 +113,7 @@
 			<div class="box">
 				<span class="icon"><iconify-icon icon="bx:user-circle"></iconify-icon></span>
 				<div class="text">
-					<h3>4</h3>
+					<h3>2</h3>
 					<p>Total of Accounts</p>
 				</div>
 			</div>
@@ -164,54 +164,8 @@
 					</div>
                     
                 </div>
-
-				<div class="table-data">
-                    <div class="order">
-                        <div class="head">
-                            <h3>Buyers Account</h3>
-                            <span><i class='bx bx-search' ></i></span>
-                            <span><i class='bx bx-filter' ></i></span>
-                        </div>
-                            <table>
-                                <thead>
-                                    <tr>
-                                        <th>SL</th>
-                                        <th>Image</th>
-                                        <th>Name</th>
-                                        <th>Phone</th>
-                                        <th>Address</th>
-                                    </tr>
-                                </thead>
-                
-                                <tbody>
-                                    <tr>
-                                        <td>01</td>
-                                        <td>
-                                            <img src="user.png" alt="">
-                                        </td>
-                                        <td>Kristel Jeanne Bautista</td>
-                                        <td>0111111111</td>
-                                        <td>Libsong East</td>
-                                    </tr>
-                                </tbody>
-								<tbody>
-                                    <tr>
-                                        <td>02</td>
-                                        <td>
-                                            <img src="user.png" alt="">
-                                        </td>
-                                        <td>Kristel Jeanne Bautista</td>
-                                        <td>0111111111</td>
-                                        <td>Libsong East</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-
-					</div>
-                    
-                </div>
         </main>
 	</section>
-    <script src="accounts.js"></script>
+    <script src="{{ asset('js/accounts.js') }}"></script>
 </body>
 </html>

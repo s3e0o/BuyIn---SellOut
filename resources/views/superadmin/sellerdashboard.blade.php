@@ -47,7 +47,7 @@
 			<li>
 				<a href="profile.html">
 					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Buyer</span>
+					<span class="text">Profile of Seller</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>
@@ -221,28 +221,6 @@
 						<span><i class='bx bx-plus' ></i></span>
 						<span><i class='bx bx-filter' ></i></span>
 					</div>
-					<ul class="todos">
-						<li class="completed">
-							<p>Todo List</p>
-							<span class="menu"><i class='bx bx-dots-vertical-rounded'></i></span>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<span class="menu"><i class='bx bx-dots-vertical-rounded'></i></span>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<span class="menu"><i class='bx bx-dots-vertical-rounded'></i></span>
-						</li>
-						<li class="completed">
-							<p>Todo List</p>
-							<span class="menu"><i class='bx bx-dots-vertical-rounded'></i></span>
-						</li>
-						<li class="not-completed">
-							<p>Todo List</p>
-							<span class="menu"><i class='bx bx-dots-vertical-rounded'></i></span>
-						</li>
-					</ul>
 				</div>
 			</div>
 		</main>
