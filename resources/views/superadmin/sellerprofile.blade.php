@@ -39,7 +39,7 @@
 			<li class="active">
 				<a href="{{ asset('/sellerprofile') }}">
 					<span class="icon"><i class='bx bxs-comment' ></i></span>
-					<span class="text">Profile of Buyer</span>
+					<span class="text">Profile of Seller</span>
 				</a>
 				<span class="top"></span>
 				<span class="bottom"></span>

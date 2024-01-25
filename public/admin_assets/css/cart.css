@@ -1,0 +1,52 @@
+*{
+    margin: .0%;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100%;
+}
+/* Header */
+
+.menu-btn{
+    color: #424144;
+    font-size: 23px;
+    cursor: pointer;
+    display: none;
+}
+.navbar{
+    padding:20px 5%;
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    position:sticky;
+    z-index: 999;
+    background-color:#4077c8 ;
+    box-shadow: 0 0 14px rgba(0,0,0,0.3);
+}
+.navbar .logo h2{
+    color:white;
+    border-bottom: 2px solid rgb(181, 140, 140);
+}
+.navbar .menu li{
+    list-style: none;
+    display: inline-block;
+}
+.navbar .menu li a{
+    display: block;
+    margin-left: 20px;
+    color: white;
+    border-bottom: 4px solid transparent;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+.navbar .menu li .active{
+    border-bottom: 2px solid rgb(181, 140, 140);
+}
+.navbar .menu li a:hover{
+    border-bottom: 2px solid rgb(181, 140, 140);
+}
