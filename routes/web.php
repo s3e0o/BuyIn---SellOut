@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SellerAuthController;
 use App\Http\Controllers\SuperAdminController;
+use App\Http\Controllers\ItemController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -53,3 +54,10 @@ Route::get('/sales', [SuperAdminController::class, 'sellersales']);
 Route::get('/sellerprofile', [SuperAdminController::class, 'sellerprofile']);
 Route::get('/buyersa', [SuperAdminController::class, 'buyersa']);
 Route::get('/buyeracc', [SuperAdminController::class, 'buyeracc']);
+
+
+Route::get('/home', [ItemController::class, 'index']);
+Route::get('/shopping-cart', [ItemController::class, 'itemCart'])->name('shopping.cart');
+Route::get('/item/{id}', [ItemController::class, 'addItemtoCart'])->name('additem.to.cart');
+Route::patch('/update-shopping-cart', [ItemController::class, 'updateCart'])->name('update.shopping.cart');
+Route::delete('/delete-cart-product', [ItemController::class, 'deleteProduct'])->name('delete.cart.product');
